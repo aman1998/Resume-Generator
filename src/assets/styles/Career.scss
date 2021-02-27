@@ -1,0 +1,32 @@
+@import './Templates.scss';
+@import './Variables.scss';
+
+.career {
+  .title {
+    @include title
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    .left, .right {
+      width: 49%;
+    }
+    .form {
+      @include form;
+      .schedule, .typeWork, .moving, .skills {
+        width: 60%;
+        &:focus {
+          border: 1px solid $mainBg;
+          box-shadow: inset 0 0 2px $mainBg, 0 0 2px $mainBg;
+        }
+      }
+    }
+    .form-moving {
+      justify-content: flex-start;
+      align-items: center;
+      .name {
+        margin-right: 50px;
+      }
+    }
+  }
+}

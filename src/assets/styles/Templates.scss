@@ -1,0 +1,67 @@
+@import './Variables.scss';
+
+@mixin btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBFBFB;
+    text-shadow: none;
+    background: #6aa6d1;
+    opacity: 1;
+    transition: all 2s;
+  &:hover {
+   background: #074572;
+  }
+}
+
+@mixin input {
+  height: 34px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  transition: 0.5s;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.85);
+  &:focus {
+    border: 1px solid $mainBg;
+    box-shadow: inset 0 0 2px $mainBg, 0 0 2px $mainBg;
+  }
+}
+
+@mixin title {
+  text-align: center;
+  font-size: 36px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+@mixin form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  .name {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .input {
+    width: 60%;
+    @include input
+  }
+  .country {
+    width: 60%;
+    &:focus {
+      border: 1px solid $mainBg;
+      box-shadow: inset 0 0 2px $mainBg, 0 0 2px $mainBg;
+    }
+  }
+}

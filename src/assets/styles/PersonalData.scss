@@ -1,0 +1,40 @@
+@import './Templates.scss';
+@import './Variables.scss';
+
+.personal {
+  .title {
+    @include title
+  }
+  &-content {
+    display: flex;
+    width: 100%;
+    .left {
+      width: 50%;
+      .form {
+        @include form;
+        .country, .gender {
+          width: 60%;
+          &:focus {
+            border: 1px solid $mainBg;
+            box-shadow: inset 0 0 2px $mainBg, 0 0 2px $mainBg;
+          }
+        }
+      }
+    }
+    .right {
+      margin-left: 50px;
+      .ant-upload {
+        width: 200px !important;
+        height: 200px !important;
+      }
+      .ant-upload-list-picture-card-container {
+        width: 200px !important;
+        height: 200px !important;
+      }
+    }
+  }
+}
+
+.ant-upload-list-item-error {
+  border-color: #d9d9d9 !important;
+}
